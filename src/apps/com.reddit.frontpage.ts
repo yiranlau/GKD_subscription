@@ -5,6 +5,32 @@ export default defineGkdApp({
   name: 'Reddit',
   groups: [
     {
+      key: 1,
+      name: '其他-Promoted广告',
+      desc: '自动点击[Optional]',
+      enable: true,
+      fastQuery: false,
+      rules: [
+        {
+          key: 0,
+          activityIds: ['com.reddit.launch.main.MainActivity'],
+          matches: '[desc*="Promoted"]',
+          position: {
+            right: 80,
+            top: 72,
+          },
+          snapshotUrls: [],
+        },
+        {
+          key: 1,
+          preKeys: [0],
+          activityIds: ['com.reddit.launch.main.MainActivity'],
+          matches: '[text="About this ad"] -1 * < * -1 *',
+          snapshotUrls: [],
+        },
+      ],
+    },
+    {
       key: 3,
       name: '其他-关闭订阅社区消息提示',
       desc: '自动点击[Not Now]',
