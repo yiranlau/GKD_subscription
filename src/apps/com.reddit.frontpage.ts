@@ -14,7 +14,7 @@ export default defineGkdApp({
         {
           key: 0,
           activityIds: ['com.reddit.launch.main.MainActivity'],
-          matches: '[desc*="Promoted"]',
+          matches: '[desc*="Promoted"][visibleToUser=true]',
           position: {
             right: 80,
             top: 72,
