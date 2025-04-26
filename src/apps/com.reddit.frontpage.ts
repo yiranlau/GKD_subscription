@@ -14,11 +14,8 @@ export default defineGkdApp({
         {
           key: 0,
           activityIds: ['com.reddit.launch.main.MainActivity'],
-          matches: '[desc*="Promoted"][visibleToUser=true]',
-          position: {
-            right: 80,
-            top: 32,
-          },
+          matches:
+            '[id="promoted_post_unit"] > * + * > [id="post_subreddit_icon"] +2 [id=null] + [id="post_overflow"][visibleToUser=true]',
           snapshotUrls: [],
         },
         {
