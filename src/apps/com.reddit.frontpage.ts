@@ -17,8 +17,7 @@ export default defineGkdApp({
           matches: '[desc*="Promoted"][visibleToUser=true]',
           position: {
             right: 80,
-            top: 72,
-            bottom: '@device.height * 0.95', // 限制不在屏幕底部5%的位置点击
+            top: 0,
           },
           snapshotUrls: [],
         },
