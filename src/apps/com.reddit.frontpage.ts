@@ -14,62 +14,10 @@ export default defineGkdApp({
         {
           key: 0,
           activityIds: ['com.reddit.launch.main.MainActivity'],
-          matches:
-            '[id="promoted_post_unit"] > * + * > [id="post_subreddit_icon"] +2 [id=null] + [id="post_overflow"][visibleToUser=true]',
-          snapshotUrls: [],
-        },
-        {
-          key: 1,
-          preKeys: [0],
-          activityIds: ['com.reddit.launch.main.MainActivity'],
-          matches: '[text="About this ad"] -1 * < * -1 *',
-          snapshotUrls: [],
-        },
-      ],
-    },
-    {
-      key: 2,
-      name: '其他-帖子详情广告',
-      desc: '自动关闭',
-      enable: true,
-      fastQuery: false,
-      rules: [
-        {
-          key: 0,
-          activityIds: ['com.reddit.launch.main.MainActivity'],
-          matches:
-            '[vid="ad_view_with_spacing"] > * > * > * > [index=1][visibleToUser=true]',
-          snapshotUrls: [],
+          matches: '[desc*="Promoted"][visibleToUser=true][top>285][top<2200]',
           position: {
             right: 80,
-            top: 32,
-          },
-        },
-        {
-          key: 1,
-          preKeys: [0],
-          activityIds: ['com.reddit.launch.main.MainActivity'],
-          matches: '[text="About this ad"] -1 * < * -1 *',
-          snapshotUrls: [],
-        },
-      ],
-    },
-    {
-      key: 5,
-      name: '其他-帖子详情广告2',
-      desc: '自动关闭',
-      enable: true,
-      fastQuery: false,
-      rules: [
-        {
-          key: 0,
-          activityIds: ['com.reddit.launch.main.MainActivity'],
-          matches:
-            '[vid="content_compose_view"] > * > * > [index=1][visibleToUser=true]',
-          snapshotUrls: [],
-          position: {
-            right: 80,
-            top: 32,
+            top: 72,
           },
         },
         {
