@@ -28,6 +28,33 @@ export default defineGkdApp({
       ],
     },
     {
+      key: 2,
+      name: '其他-帖子详情广告',
+      desc: '自动点击[Not Now]',
+      enable: true,
+      fastQuery: false,
+      rules: [
+        {
+          key: 0,
+          activityIds: ['com.reddit.launch.main.MainActivity'],
+          matches:
+            '[vid="ad_view_with_spacing"] > * > * > * > [index=1][visibleToUser=true]',
+          snapshotUrls: [],
+          position: {
+            right: 80,
+            top: 32,
+          },
+        },
+        {
+          key: 1,
+          preKeys: [0],
+          activityIds: ['com.reddit.launch.main.MainActivity'],
+          matches: '[text="About this ad"] -1 * < * -1 *',
+          snapshotUrls: [],
+        },
+      ],
+    },
+    {
       key: 3,
       name: '其他-关闭订阅社区消息提示',
       desc: '自动点击[Not Now]',
