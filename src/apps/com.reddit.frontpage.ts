@@ -17,7 +17,7 @@ export default defineGkdApp({
           matches: '[desc*="Promoted"][visibleToUser=true]',
           position: {
             right: 80,
-            top: 0,
+            top: 32,
           },
           snapshotUrls: [],
         },
