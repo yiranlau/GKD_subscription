@@ -212,5 +212,64 @@ export default defineGkdApp({
         },
       ],
     },
+    {
+      key: 12,
+      name: '其他-关闭声音',
+      desc: '关闭声音',
+      enable: true,
+      rules: [
+        {
+          fastQuery: false,
+          activityIds: 'com.ss.android.excitingvideo.ExcitingVideoActivity',
+          matches: '[desc="开启声音"]',
+        },
+      ],
+    },
+    {
+      key: 13,
+      name: '其他-成功后关闭',
+      desc: '成功后关闭',
+      enable: true,
+      rules: [
+        {
+          fastQuery: false,
+          activityIds: 'com.ss.android.excitingvideo.ExcitingVideoActivity',
+
+          matches:
+            '[name="android.widget.FrameLayout"][childCount<=17] > [desc="广告"]',
+          position: {
+            left: 880,
+            top: 'height/2',
+          },
+          matchDelay: 1000,
+        },
+      ],
+    },
+    {
+      key: 14,
+      name: '其他-领取奖励',
+      desc: '领取奖励',
+      enable: true,
+      rules: [
+        {
+          fastQuery: false,
+          activityIds: 'com.ss.android.excitingvideo.ExcitingVideoActivity',
+          matches: '[desc="领取奖励"]',
+        },
+      ],
+    },
+    {
+      key: 15,
+      name: '其他-继续观看',
+      desc: '继续观看',
+      enable: true,
+      rules: [
+        {
+          fastQuery: false,
+          activityIds: 'com.ss.android.excitingvideo.ExcitingVideoActivity',
+          matches: '[desc="继续观看1"]',
+        },
+      ],
+    },
   ],
 });
