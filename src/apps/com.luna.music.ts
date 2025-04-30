@@ -267,7 +267,20 @@ export default defineGkdApp({
         {
           fastQuery: false,
           activityIds: 'com.ss.android.excitingvideo.ExcitingVideoActivity',
-          matches: '[desc="继续观看1"]',
+          matches: '[desc="坚持退出"]',
+        },
+      ],
+    },
+    {
+      key: 16,
+      name: '其他-立刻解锁',
+      desc: '立刻解锁',
+      enable: true,
+      rules: [
+        {
+          fastQuery: false,
+          activityIds: 'com.luna.biz.main.main.MainActivity',
+          matches: '[desc*="解锁"]',
         },
       ],
     },
